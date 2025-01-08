@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Counter V1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="counter-container">
+        <h1>Page Counter V1</h1>
+        
+        <!-- Input Section -->
+        <p>Enter the starting page:</p>
+        <input type="number" id="startingPage" placeholder="Enter starting page">
+        <p>Enter your current page:</p>
+        <input type="number" id="currentPage" placeholder="Enter current page">
+        <p>Enter the page you need to read up to:</p>
+        <input type="number" id="totalPages" placeholder="Enter page to read up to">
+        <button onclick="calculatePagesLeft()">Calculate</button>
+        <div class="result" id="result"></div>
+        
+        <!-- Checkbox for Rank Visibility -->
+        <div class="toggle-container">
+            <label class="toggle-label">
+                Show Ranks:
+                <input type="checkbox" id="rankToggle">
+            </label>
+        </div>
+        
+        <!-- Rank Set Selector -->
+        <div class="toggle-container">
+            <label class="toggle-label">Select Rank Set:</label>
+            <select id="rankSetSelector">
+                <option value="trophys">Trophy Ranks</option>
+                <option value="elemental">Elemental Ranks</option>
+            </select>
+        </div>
+    </div>
+    
+    <!-- Celebration GIF Section -->
+    <div class="gif-container" id="gifContainer">
+        <img src="bdefa1f5772f97cf5fea28834c6fa5ed.gif" alt="Celebration GIF" />
+    </div>
+    
+    <!-- Progress Bar Section -->
+    <div class="progress-bar" id="progressBar">
+        <div class="progress-bar-fill" id="progressBarFill">0%</div>
+    </div>
+    <!-- Rank Level Bar Section -->
+    <div class="rank-level-bar" id="rankLevelBar">
+        <div class="rank-level-segment"></div>
+        <div class="rank-level-segment"></div>
+        <div class="rank-level-segment"></div>
+        <div class="rank-level-segment"></div>
+        <div class="rank-level-segment"></div>
+        <div class="rank-level-segment"></div>
+        <div class="rank-level-segment"></div>
+        <div class="rank-level-segment"></div>
+    </div>  
+    <!-- Rank Display Section -->
+    <div class="rank-container" id="rankContainer" style="display: none;">
+        <div class="rank-level" id="rankLevel"></div>
+        <img id="rankImage" src="" alt="Rank" />
+    </div>
+
+    <button id="loadGameButton">Load Game</button>
+    <div id="gamePopup">
+        <iframe id="gameFrame"></iframe>
+        <button id="exitGameButton">Exit Game</button>
+    </div>    
+    
+    <audio id="drumSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+
+    <script src="script.js"></script>
+    <script src="rainbowtext.js"></script>
+</body>
+</html>
